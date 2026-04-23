@@ -1,0 +1,43 @@
+[package]
+name = "exlex_bench"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# We point directly to your local exlex crate
+exlex = { path = "../exlex" }
+
+[dev-dependencies]
+criterion = "0.4"
+serde_json = "1.0"
+toml_edit = "0.22"
+toml = "0.8"
+quick-xml = "0.31"
+sonic-rs = "0.3"
+rust-ini = "0.21"
+simd-json = "0.13" # Gated for now, requires AVX2
+figment = { version = "0.10", features = ["json"] }
+
+[[bench]]
+name = "1_bench_parse"
+harness = false
+
+[[bench]]
+name = "2_bench_lookup_flat"
+harness = false
+
+[[bench]]
+name = "3_bench_lookup_nested"
+harness = false
+
+[[bench]]
+name = "4_bench_iteration"
+harness = false
+
+[[bench]]
+name = "5_bench_mutate"
+harness = false
+
+[[bench]]
+name = "6_bench_roundtrip"
+harness = false

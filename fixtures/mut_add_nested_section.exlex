@@ -1,0 +1,33 @@
+sect "ds_L0_N0" {
+  "key_ds_L0_N0_0": "value_ds_L0_N0_0_xxxxxxxxxx"
+  "key_ds_L0_N0_1": "value_ds_L0_N0_1_xxxxxxxxxx"
+  sect "ds_L1_N0" {
+    "key_ds_L1_N0_0": "value_ds_L1_N0_0_xxxxxxxxxx"
+    "key_ds_L1_N0_1": "value_ds_L1_N0_1_xxxxxxxxxx"
+    sect "ds_L2_N0" {
+      "key_ds_L2_N0_0": "value_ds_L2_N0_0_xxxxxxxxxx"
+      "key_ds_L2_N0_1": "value_ds_L2_N0_1_xxxxxxxxxx"
+      sect "ds_L3_N0" {
+        "key_ds_L3_N0_0": "value_ds_L3_N0_0_xxxxxxxxxx"
+        "key_ds_L3_N0_1": "value_ds_L3_N0_1_xxxxxxxxxx"
+        sect "ds_L4_N0" {
+          "key_ds_L4_N0_0": "value_ds_L4_N0_0_xxxxxxxxxx"
+          "key_ds_L4_N0_1": "value_ds_L4_N0_1_xxxxxxxxxx"
+          sect "ds_L5_N0" {
+            "key_ds_L5_N0_0": "value_ds_L5_N0_0_xxxxxxxxxx"
+            "key_ds_L5_N0_1": "value_ds_L5_N0_1_xxxxxxxxxx"
+            sect "ds_L6_N0" {
+              "key_ds_L6_N0_0": "value_ds_L6_N0_0_xxxxxxxxxx"
+              "key_ds_L6_N0_1": "value_ds_L6_N0_1_xxxxxxxxxx"
+              sect "ds_L7_N0" {
+                "key_ds_L7_N0_0": "value_ds_L7_N0_0_xxxxxxxxxx"
+                "key_ds_L7_N0_1": "value_ds_L7_N0_1_xxxxxxxxxx"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

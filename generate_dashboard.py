@@ -87,17 +87,17 @@ for root, dirs, files in os.walk(backup_dir):
             db[group][scenario] = {}
         db[group][scenario][parser] = point_est
 
-# 3. Dedicated Color Palette (Exlex stands out)
+# 3. Dedicated Color Palette (Okabe-Ito Colorblind Safe)
 COLOR_MAP = {
-    "Exlex (DOD)": "#00e5ff",  # Neon Cyan
-    "Serde JSON": "#ff3d00",  # Deep Orange
-    "Sonic-RS (SIMD)": "#00e676",  # Neon Green
-    "SIMD-JSON": "#1de9b6",  # Teal
-    "TOML": "#ffea00",  # Yellow
-    "TOML Edit": "#ffb300",  # Amber
-    "INI": "#d50000",  # Red
-    "Quick-XML": "#aa00ff",  # Purple
-    "Figment (Layer)": "#3d5afe",  # Indigo
+    "Exlex (DOD)": "#00e5ff",       # Neon Cyan
+    "Serde JSON": "#E69F00",        # Orange
+    "Sonic-RS (SIMD)": "#009E73",   # Green
+    "SIMD-JSON": "#56B4E9",         # Sky Blue
+    "TOML": "#999999",              # Grey
+    "TOML Edit": "#F0E442",         # Yellow
+    "INI": "#D55E00",               # Vermillion / Red-Orange
+    "Quick-XML": "#CC79A7",         # Reddish-Purple
+    "Figment (Layer)": "#0072B2",   # Dark Blue
 }
 
 # 4. Generate the Plotly HTML blocks

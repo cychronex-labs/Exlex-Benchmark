@@ -96,7 +96,17 @@ impl ConfigNode {
         }
         nodes
     }
-
+    fn generate_exact_scale(prop_count: usize) -> ConfigNode {
+        let mut props = Vec::with_capacity(prop_count);
+        for p in 0..prop_count {
+            props.push((format!("key_{}", p), format!("val_{}", p)));
+        }
+        ConfigNode {
+            name: format!("scale_{}", prop_count),
+            props,
+            children: Vec::new(),
+        }
+    }
     // --- Format Serializers ---
 
     fn to_exlex(&self, buffer: &mut String, indent: usize) {
@@ -275,5 +285,13 @@ fn main() {
     write_matrix("mut_mass_update_save", &lopsided_dense);
     write_matrix("mut_roundtrip_verify", &bushy_normal);
 
+    // --- ASYMPTOTIC SCALING FIXTURES ---
+    // Generate config files scaling from 5 to 100 properties to find the HashMap crossover
+    for count in (5..=100).step_by(5) {
+        let node = ConfigNode::generate_exact_scale(count);
+        // This will create files like "scale_005.exlex", "scale_010.exlex", etc.
+        let name = format!("scale_{:03}", count);
+        write_matrix(&name, &[node]);
+    }
     println!("=> Generation complete. 21 dimensions mapped to fixtures/");
 }

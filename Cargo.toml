@@ -4,8 +4,10 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-# We point directly to your local exlex crate
 exlex = { path = "../exlex" }
+dhat = "0.3"
+serde_json = "1.0"
+toml_edit = "0.22"
 
 [dev-dependencies]
 criterion = "0.4"
@@ -40,4 +42,16 @@ harness = false
 
 [[bench]]
 name = "6_bench_roundtrip"
+harness = false
+
+[[bench]]
+name = "7_bench_asymptotic"
+harness = false
+
+[[bench]]
+name = "8_bench_cold_start"
+harness = false
+
+[[bench]]
+name = "9_bench_mixed_workload"
 harness = false

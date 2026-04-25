@@ -19,6 +19,7 @@ sonic-rs = "0.3"
 rust-ini = "0.21"
 simd-json = "0.13" # Gated for now, requires AVX2
 figment = { version = "0.10", features = ["json"] }
+proptest = "1.4.0"
 
 [[bench]]
 name = "1_bench_parse"

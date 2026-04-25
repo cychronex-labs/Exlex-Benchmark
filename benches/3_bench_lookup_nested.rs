@@ -23,12 +23,21 @@ fn bench_lookup_nested(c: &mut Criterion) {
     ];
     let target_key = "key_ds_L6_N0_1";
 
-    // 1. Exlex DOD Path Traversal
     group.bench_function("Exlex_Path_Depth_6", |b| {
         b.iter(|| {
+            // Start at the root
+            let mut current_sect = exlex_parsed.get_root();
+
+            // Iteratively dive down the section path
+            for &sect_name in black_box(&path) {
+                current_sect = exlex_parsed.get_child(sect_name, current_sect).unwrap();
+            }
+
+            // Finally, fetch the property in that deeply nested section
             let val = exlex_parsed
-                .get_nested_property(black_box(&path), black_box(target_key))
+                .get_property(black_box(target_key), current_sect)
                 .unwrap();
+
             black_box(val);
         })
     });
